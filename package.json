@@ -2,13 +2,15 @@
   "type": "module",
   "version": "1.0.0-beta.2",
   "scripts": {
-    "setup": "cd kaplay && pnpm install",
+    "setup": "cd kaplay && pnpm i",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "wrangler types && astro check && astro build",
     "preview": "wrangler pages dev ./dist --compatibility-flags=\"nodejs_compat\"",
     "astro": "astro",
-    "fmt": "dprint fmt"
+    "fmt": "dprint fmt",
+    "cf:preview": "wrangler pages dev dist",
+    "cf:deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
